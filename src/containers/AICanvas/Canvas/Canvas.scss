@@ -1,0 +1,239 @@
+.react-flow__panel {
+  background-color: rgb(14, 11, 15);
+}
+
+.context-menu {
+  background: #1e1b26;
+  color: #c0c0c3;
+  font-size: 13px;
+  padding: 3px 0;
+  border-style: solid;
+  box-shadow: 0 8px 40px #05020e99;
+  position: absolute;
+  z-index: 10;
+  border-radius: 6px;
+  border: 1px solid #2a2832;
+  font-weight: 510;
+  width: 200px;
+
+  button {
+    all: unset;
+    font-size: 13px;
+    line-height: 1;
+    color: #c0c0c3;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 25px;
+    padding: 4px 12px;
+    position: relative;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0 3px;
+  }
+
+  button:hover {
+    background: #2e2b36;
+  }
+}
+
+.separtor {
+  height: 1px;
+  background-color: #2a2832;
+  margin: 3px 0;
+}
+
+.toolbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    background-color: rgb(30 27 38);
+    padding: 10px;
+    margin: 0;
+    border: 0.5px solid rgb(48 45 57);
+    cursor: pointer;
+  }
+
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(48 45 57);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  span:hover {
+    background-color: rgb(48 45 57);
+
+    .tooltiptext {
+      visibility: visible;
+      bottom: 115%;
+    }
+  }
+}
+
+.btn-left {
+  border-radius: 6px 0 0 6px;
+}
+
+.btn-right {
+  border-radius: 0 6px 6px 0;
+}
+
+.btn-right:hover {
+  background-color: rgb(104, 11, 15);
+}
+
+.control-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    background-color: rgb(30 27 38);
+    padding: 15px;
+    margin: 0;
+    border: 0.5px solid rgb(48 45 57);
+    cursor: pointer;
+  }
+
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(48 45 57);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  span:hover {
+    background-color: rgb(48 45 57);
+    border: 1px solid white;
+
+    .tooltiptext {
+      visibility: visible;
+      top: 110%;
+    }
+  }
+
+  span.active {
+    background-color: rgb(104, 114, 255);
+    svg {
+      path {
+        stroke: white;
+      }
+    }
+  }
+}
+
+.wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.workspaces {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.create-workspace {
+  border: 1px solid rgb(131, 131, 131);
+  background-color: #ffffff08;
+  border-radius: 6px;
+  width: 300px;
+  height: 200px;
+}
+
+.create-workspace:hover {
+  cursor: pointer;
+  border: 1px solid rgb(104, 114, 255);
+}
+
+.each-workspace {
+  flex: 1 1 0%;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(131, 131, 131);
+  justify-content: space-between;
+  border-radius: 6px;
+  position: relative;
+  text-align: center;
+  // padding-top: 60px;
+  font-size: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='9' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='rgb(84, 84, 84)' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E");
+
+  .event-handler {
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+  }
+
+  .control-bar {
+    position: absolute;
+    bottom: 0;
+    height: 30%;
+    width: 100%;
+    background-color: #323336;
+    border-radius: 0 0 6px 6px;
+    border-top: 1px solid rgb(131, 131, 131);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+
+    p {
+      text-align: center;
+      display: flex;
+      margin: auto;
+      gap: 100px;
+    }
+
+    button {
+      border-radius: 6px;
+      background-color: #1e1b26;
+      border: 1px solid #fff5;
+      width: 30px;
+      opacity: 0;
+
+      svg {
+        display: flex;
+        margin: auto;
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+.each-workspace:hover {
+  cursor: pointer;
+  border: 1px solid rgb(104, 114, 255);
+
+  .control-bar {
+    border-top: 1px solid rgb(104, 114, 255);
+
+    button {
+      opacity: 1;
+    }
+
+    button:hover {
+      background-color: #f005;
+    }
+  }
+}
+
+.workspace-info {
+  height: 100%;
+  margin-top: 20%;
+  font-size: 30px;
+}
